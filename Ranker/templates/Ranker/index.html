@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Ranker</title>
+</head>
+<body>
+    <h1>AI Resume Ranker</h1>
+    <form method="post" enctype="multipart/form-data">
+    <!-- method="post": Indicates a secure, server-handled form submission. -->
+    <!-- enctype="multipart/form-data": Ensures file upload functionality. -->
+        {% csrf_token %}
+        <!-- Adds a CSRF token for security. -->
+        {{ form.as_p }}
+        <!-- Renders the form fields in paragraph format. -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
